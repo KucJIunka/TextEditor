@@ -1,7 +1,7 @@
 const DEFAULT_SETTINGS = {
-  provider: 'ollama',
-  baseUrl: 'http://127.0.0.1:11434',
-  model: 'llama3.2:3b',
+  provider: 'openai_compatible',
+  baseUrl: 'https://api.groq.com/openai/v1',
+  model: 'llama-3.1-8b-instant',
   apiKey: '',
   maxChars: 24000,
   cloudMaxChars: 4000,
