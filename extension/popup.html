@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Adapter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">Text Adapter</div>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <label class="label" for="mode">Режим</label>
+        <select id="mode">
+          <option value="selection">Выделение</option>
+          <option value="page">Вся страница</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label class="label" for="level">Уровень</label>
+        <select id="level">
+          <option value="light">Light</option>
+          <option value="medium" selected>Medium</option>
+          <option value="max">Max</option>
+        </select>
+      </div>
+
+      <button id="adapt" class="primary">Адаптировать</button>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

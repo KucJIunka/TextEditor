@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Text Adapter (AI)",
+  "version": "0.2.5",
+  "description": "Адаптация сложности текста на странице через AI (локально или бесплатный API).",
+  "action": {
+    "default_title": "Text Adapter",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ollama_cors",
+        "enabled": true,
+        "path": "rules/ollama_cors.json"
+      }
+    ]
+  },
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:11434/*",
+    "http://localhost:11434/*",
+    "http://127.0.0.1:1234/*",
+    "http://localhost:1234/*",
+    "https://api.groq.com/*",
+    "https://api.openai.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "text-adapter@student.local",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "css": ["content_script.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

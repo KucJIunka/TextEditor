@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Adapter Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Text Adapter Options</h1>
+
+      <section class="card">
+        <div class="row">
+          <label for="preset">Быстрая настройка</label>
+          <select id="preset">
+            <option value="">— выбрать —</option>
+            <option value="ollama">Ollama (локально)</option>
+            <option value="groq">Groq (бесплатный API, без Ollama)</option>
+            <option value="openai">OpenAI API</option>
+            <option value="lmstudio">LM Studio (локально)</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="provider">Provider</label>
+          <select id="provider">
+            <option value="ollama">Ollama (local)</option>
+            <option value="openai_compatible">OpenAI-compatible (HTTP)</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="baseUrl">Base URL</label>
+          <input id="baseUrl" type="text" placeholder="http://127.0.0.1:11434" />
+        </div>
+
+        <div class="row">
+          <label for="model">Model</label>
+          <div class="field-stack">
+            <input id="model" type="text" placeholder="llama3.2:3b" />
+            <p class="field-hint">
+              Быстрее: <code>llama3.2:1b</code>, <code>phi3:mini</code> —
+              <code>ollama pull llama3.2:1b</code>
+            </p>
+          </div>
+        </div>
+
+        <div class="row row-check">
+          <label for="fastMode">Fast mode</label>
+          <input id="fastMode" type="checkbox" checked />
+          <span class="field-hint">Короткий промпт и лимит ответа</span>
+        </div>
+
+        <div class="row">
+          <label for="apiKey">API key</label>
+          <input id="apiKey" type="password" placeholder="обязателен для Groq / OpenAI" />
+        </div>
+
+        <div class="row">
+          <label for="maxChars">Max chars</label>
+          <input id="maxChars" type="number" min="1000" step="500" />
+        </div>
+
+        <div class="actions">
+          <button id="save" class="primary">Save</button>
+          <button id="test" class="btn">Test connection</button>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+        <div class="note">
+          <strong>Groq:</strong> длинный текст — по частям. При лимите (429) расширение само подождёт и повторит.
+          Быстрее — <em>Выделение</em> или Ollama.
+        </div>
+      </section>
+    </main>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>
+

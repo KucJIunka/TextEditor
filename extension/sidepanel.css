@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.title .name {
+  font-weight: 650;
+}
+
+.meta {
+  margin-top: 2px;
+  color: #666;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #fafafa;
+}
+
+main {
+  padding: 12px;
+}
+
+.empty {
+  color: #666;
+  border: 1px dashed #d9d9d9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pill {
+  display: inline-flex;
+  gap: 6px;
+  align-items: baseline;
+  border: 1px solid #e8e8e8;
+  background: #fafafa;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.pill-label {
+  color: #666;
+}
+
+.pill-value {
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+.text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.error {
+  color: #b00020;
+  padding: 0 12px 12px;
+}
+

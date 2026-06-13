@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #fafafa;
+}
+
+main {
+  max-width: 760px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 4px 0 12px;
+  font-size: 18px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #444;
+}
+
+input,
+select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+}
+
+.primary {
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #1a73e8;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status {
+  margin-top: 10px;
+  min-height: 18px;
+  color: #444;
+}
+
+.note {
+  margin-top: 10px;
+  color: #666;
+}
+
+.field-hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.field-stack input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row-check {
+  grid-template-columns: 140px auto 1fr;
+}
+
+.row-check .field-hint {
+  margin: 0;
+}
+

@@ -1,0 +1,98 @@
+#text-adapter-root {
+  --ta-accent: #1a73e8;
+  --ta-bg: #fff;
+  --ta-border: #d0d7de;
+  --ta-muted: #57606a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #111;
+  background: var(--ta-bg);
+  border: 2px solid var(--ta-accent);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin: 12px 0 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2147483646;
+}
+
+#text-adapter-root .ta-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f6f8fa;
+  border-bottom: 1px solid var(--ta-border);
+}
+
+#text-adapter-root .ta-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ta-accent);
+  margin-right: auto;
+}
+
+#text-adapter-root .ta-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--ta-border);
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#text-adapter-root .ta-btn.active {
+  background: var(--ta-accent);
+  border-color: var(--ta-accent);
+  color: #fff;
+}
+
+#text-adapter-root .ta-btn.ta-close {
+  color: #b42318;
+  border-color: #fecdca;
+}
+
+#text-adapter-root .ta-body {
+  padding: 14px 16px 16px;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+#text-adapter-root .ta-paragraph {
+  margin: 0 0 12px;
+}
+
+#text-adapter-root .ta-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+#text-adapter-root .ta-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+#text-adapter-root .ta-col h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--ta-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+#text-adapter-root .ta-col .ta-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+#text-adapter-root .ta-hidden-source {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  #text-adapter-root .ta-compare {
+    grid-template-columns: 1fr;
+  }
+}

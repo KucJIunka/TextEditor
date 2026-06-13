@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Adapter</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <div class="name">Text Adapter</div>
+        <div id="meta" class="meta"></div>
+      </div>
+      <div class="actions">
+        <button id="toggleView" class="btn">Compare</button>
+        <button id="copy" class="btn">Copy</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="empty" class="empty">
+        Select text on a page (or choose Whole page), then click Adapt in the popup.
+      </div>
+
+      <div id="content" class="content hidden">
+        <div class="toolbar">
+          <div class="pill">
+            <span class="pill-label">Level:</span>
+            <span id="level" class="pill-value"></span>
+          </div>
+          <div class="pill">
+            <span class="pill-label">Provider:</span>
+            <span id="provider" class="pill-value"></span>
+          </div>
+        </div>
+
+        <section id="single" class="single">
+          <h2 class="h2">Adapted</h2>
+          <div id="adapted" class="text"></div>
+        </section>
+
+        <section id="compare" class="compare hidden">
+          <div class="col">
+            <h2 class="h2">Original</h2>
+            <div id="original" class="text"></div>
+          </div>
+          <div class="col">
+            <h2 class="h2">Adapted</h2>
+            <div id="adapted2" class="text"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div id="error" class="error"></div>
+    </footer>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
+
