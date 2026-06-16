@@ -8,7 +8,7 @@ const statusEl = document.getElementById('status');
 const WAIT_MSG = 'Пожалуйста, подождите';
 const DONE_MSG = 'Готово';
 
-function clipForMessaging(text, maxChars = 60000) {
+function clipForMessaging(text, maxChars = 60000) {     
   if (!text) return '';
   if (text.length <= maxChars) return text;
   return text.slice(0, maxChars) + '\n\n[CLIPPED_FOR_EXTENSION]';
